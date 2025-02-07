@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffe6e6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #ff4d4d;
+}
+
+img {
+    width: 150px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#yes {
+    background-color: #ff4d4d;
+    color: white;
+    font-weight: bold;
+}
+
+#no {
+    background-color: #ddd;
+    color: black;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+@keyframes vibrate {
+    0% { transform: translate(1px, 1px); }
+    20% { transform: translate(-1px, -1px); }
+    40% { transform: translate(1px, -1px); }
+    60% { transform: translate(-1px, 1px); }
+    80% { transform: translate(1px, 1px); }
+    100% { transform: translate(0, 0); }
+}
+
+.vibrate {
+    animation: vibrate 0.2s ease-in-out 3;
+}
+
+@keyframes dropButton {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(180deg) translateY(200px); }
+}
+
+@keyframes cursorEscape {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(100px, 100px); }
+}
+
+button {
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+}
+
+.dropButton {
+    animation: dropButton 1s ease-out;
+}
